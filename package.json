@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Test monorepo structure",
   "scripts": {
-    "install:backend": "cd apps/backend && npm install",
-    "install:frontend": "cd apps/frontend && npm install",
-    "install:lib": "cd libs/common && npm install",
+    "install:backend": "cd apps/backend && test -f package.json && npm install",
+    "install:frontend": "cd apps/frontend && test -f package.json && npm install",
+    "install:lib": "cd libs/common && test -f package.json && npm install",
     "postinstall": "npm run install:backend && npm run install:frontend && npm run install:lib"
   },
   "repository": {
