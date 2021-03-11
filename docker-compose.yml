@@ -1,0 +1,48 @@
+version: "3.5"
+
+services:
+  nestjs:
+    build:
+      context: ./apps/backend
+      dockerfile: Dockerfile.dev
+    env_file:
+     - ./apps/backend/.env.dev
+    ports:
+      - 3001:3001
+    volumes:
+      - ./apps/backend/:/app
+      - /app/node_modules
+
+  react_app:
+    build:
+      context: ./apps/frontend
+      dockerfile: Dockerfile.dev
+    env_file:
+     - ./apps/frontend/.env.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - ./apps/frontend/:/app
+      - /app/node_modules
+
+  postgres:
+    image: postgres:13.1
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+     - 5432:5432
+
+  redis:
+    image: redis:6.2-rc1
+    environment:
+      REDIS_PASSWORD: password
+
+  redis_commander:
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - 8081:8081
+    depends_on:
+      - redis
