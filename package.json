@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Test monorepo structure",
   "scripts": {
-    "postinstall": "(cd apps/backend && npm install); (cd apps/frontend && npm install); (cd libs/common && npm install)"
+    "install:backend": "cd apps/backend && npm install",
+    "install:frontend": "cd apps/frontend && npm install",
+    "install:lib": "cd lib/common && npm install",
+    "postinstall": "run-p install:*"
   },
   "repository": {
     "type": "git",
