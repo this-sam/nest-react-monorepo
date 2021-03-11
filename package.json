@@ -5,7 +5,7 @@
   "scripts": {
     "install:backend": "cd apps/backend && npm install",
     "install:frontend": "cd apps/frontend && npm install",
-    "install:lib": "cd lib/common && npm install",
+    "install:lib": "cd libs/common && npm install",
     "postinstall": "npm run install:backend && npm run install:frontend && npm run install:lib"
   },
   "repository": {
