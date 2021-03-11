@@ -1,0 +1,19 @@
+{
+  "name": "nest-react-monorepo",
+  "version": "1.0.0",
+  "description": "Test monorepo structure",
+  "scripts": {
+    "postinstall": "(cd apps/backend && npm install); (cd apps/frontend && npm install); (cd libs/common && npm install)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/this-sam/nest-react-monorepo.git"
+  },
+  "author": "Sam Brown",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/this-sam/nest-react-monorepo/issues"
+  },
+  "homepage": "https://github.com/this-sam/nest-react-monorepo#readme"
+}
+
