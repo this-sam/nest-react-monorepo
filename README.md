@@ -1,5 +1,5 @@
 # Some kinda test project
 
-npm install in both of apps/backend/frontend directories I guess?
+Install dependencies for all apps/libs with `npm install`
 
 run on docker with `docker-compose up`
