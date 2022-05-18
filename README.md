@@ -1,4 +1,9 @@
 # Monorepo Template
+
+This is a TEST monorepo template. I do not recommend forking it for your own projects. Please do your own research, and ensure you start with the correct tools from the beginning. 
+
+## Notes
+
 Nest + React + Postgres + Redis -> Docker
 
 NestJS repo in apps/backend
